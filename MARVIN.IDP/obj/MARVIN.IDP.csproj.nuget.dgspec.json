@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\MARVIN.IDP\\MARVIN.IDP.csproj": {}
+    "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\MARVIN.IDP\\MARVIN.IDP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\MARVIN.IDP\\MARVIN.IDP.csproj": {
+    "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\MARVIN.IDP\\MARVIN.IDP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\MARVIN.IDP\\MARVIN.IDP.csproj",
+        "projectUniqueName": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\MARVIN.IDP\\MARVIN.IDP.csproj",
         "projectName": "MARVIN.IDP",
-        "projectPath": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\MARVIN.IDP\\MARVIN.IDP.csproj",
+        "projectPath": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\MARVIN.IDP\\MARVIN.IDP.csproj",
         "packagesPath": "C:\\Users\\SAMIR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\MARVIN.IDP\\obj\\",
+        "outputPath": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\MARVIN.IDP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -46,6 +46,26 @@
               "version": "[4.2.0, )"
             },
             "IdentityServer4": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "IdentityServer4.EntityFramework": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
             },

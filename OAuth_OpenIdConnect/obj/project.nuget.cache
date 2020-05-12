@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UwgUCWo/IJ0XD86Eln7FYp6GWurfvKB2aZB833e1svofRBeE41WZ7N3mW9t0agOozmoqfMA1ZY1f75/KbZ9j1Q==",
+  "dgSpecHash": "Fi3yThwp+bQs4tVZSFG+fX8iAXvOCwOcsZmSmZEalwWWN/Fn1Pv7O0XdH5udr8Hv8QReGaJfw2sdf0cRfK+vPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj",
+  "projectFilePath": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAMIR\\.nuget\\packages\\identitymodel\\4.2.0\\identitymodel.4.2.0.nupkg.sha512",
     "C:\\Users\\SAMIR\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.1.3\\microsoft.aspnetcore.authentication.openidconnect.3.1.3.nupkg.sha512",

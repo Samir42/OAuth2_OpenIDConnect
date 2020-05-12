@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj": {}
+    "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj": {
+    "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj",
+        "projectUniqueName": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj",
         "projectName": "OAuth_OpenIdConnect",
-        "projectPath": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj",
+        "projectPath": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect.csproj",
         "packagesPath": "C:\\Users\\SAMIR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\OAuth_OpenIdConnect\\obj\\",
+        "outputPath": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\OAuth_OpenIdConnect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

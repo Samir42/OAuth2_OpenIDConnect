@@ -2,10 +2,15 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using IdentityServer4.EntityFramework.DbContexts;
+using IdentityServer4.EntityFramework.Mappers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Linq;
+using System.Reflection;
 
 namespace MARVIN.IDP
 {
@@ -20,6 +25,9 @@ namespace MARVIN.IDP
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var marvinIDPDataDBConnectionString =
+               "Server=(localdb)\\mssqllocaldb;Database=MarvinIDPDataDB;Trusted_Connection=True;";
+
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
 
@@ -31,6 +39,31 @@ namespace MARVIN.IDP
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
+
+
+            //Get the migration assembly name, in my case it's MARVIN.IDP
+            //var migrationsAssembly = typeof(Startup)
+            //    .GetTypeInfo().Assembly.GetName().Name;
+
+            //Data seeding will be here
+
+            //Configuration data ==> clients, resources and so on.
+            //builder.AddConfigurationStore(options =>
+            //{
+            //    options.ConfigureDbContext = builder =>
+            //        builder.UseSqlServer(marvinIDPDataDBConnectionString,
+            //        //we say here that migrations can be found in MARVIN.IDP
+            //        options => options.MigrationsAssembly(migrationsAssembly));
+            //});
+
+
+            //tokens and so on.
+            //builder.AddOperationalStore(options =>
+            //{
+            //    options.ConfigureDbContext = builder =>
+            //        builder.UseSqlServer(marvinIDPDataDBConnectionString,
+            //        options => options.MigrationsAssembly(migrationsAssembly));
+            //});
         }
 
         public void Configure(IApplicationBuilder app)
@@ -39,6 +72,8 @@ namespace MARVIN.IDP
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            InitializeDatabase(app);
 
             // uncomment if you want to add MVC
             app.UseStaticFiles();
@@ -52,6 +87,50 @@ namespace MARVIN.IDP
             {
                 endpoints.MapDefaultControllerRoute();
             });
+        }
+
+        private void InitializeDatabase(IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices
+                .GetService<IServiceScopeFactory>().CreateScope())
+            {
+                serviceScope.ServiceProvider
+                    .GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
+
+                var context = serviceScope.ServiceProvider
+                    .GetRequiredService<ConfigurationDbContext>();
+                context.Database.Migrate();
+
+                //Run through client located in the Config file
+                if (!context.Clients.Any())
+                {
+                    foreach (var client in Config.Clients)
+                    {
+                        context.Clients.Add(client.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+
+                //Run through Identity resources located in the Config file
+                if (!context.IdentityResources.Any())
+                {
+                    foreach (var resource in Config.Ids)
+                    {
+                        context.IdentityResources.Add(resource.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+
+                //Run through Api resources located in the Config file
+                if (!context.ApiResources.Any())
+                {
+                    foreach (var resource in Config.Apis)
+                    {
+                        context.ApiResources.Add(resource.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }

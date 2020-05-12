@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z+IR88hmucGzGNj4Fy/RA5YyAS/C+ENwCDj7kxP3rpiM1zyTMPUI5rORTDKfPla8B9rFtFG9ZYkuqyHk0XckOA==",
+  "dgSpecHash": "aQZo9+Ox037mwkiE7eT00DKIpS4JO2dxYAt8MJmXNtquP6z3xx5atwBydbMlHKjf+3zO4R3s4tu7XRcVGCKPSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SAMIR\\source\\repos\\OAuth_OpenIdConnect\\ImageGalleryAPI\\ImageGalleryAPI.csproj",
+  "projectFilePath": "C:\\Users\\SAMIR\\Source\\Repos\\OAuth2_OpenIDConnect2\\ImageGalleryAPI\\ImageGalleryAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAMIR\\.nuget\\packages\\identitymodel\\4.0.0\\identitymodel.4.0.0.nupkg.sha512",
     "C:\\Users\\SAMIR\\.nuget\\packages\\identitymodel.aspnetcore.oauth2introspection\\4.0.1\\identitymodel.aspnetcore.oauth2introspection.4.0.1.nupkg.sha512",
